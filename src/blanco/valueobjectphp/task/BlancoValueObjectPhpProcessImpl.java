@@ -23,7 +23,7 @@ import blanco.valueobjectphp.task.valueobject.BlancoValueObjectPhpProcessInput;
 public class BlancoValueObjectPhpProcessImpl implements
         BlancoValueObjectPhpProcess {
     /**
-     * ‚±‚Ìƒvƒƒ_ƒNƒg‚ÌƒŠƒ\[ƒXƒoƒ“ƒhƒ‹‚Ö‚ÌƒAƒNƒZƒXƒIƒuƒWƒFƒNƒgB
+     * ã“ã®ãƒ—ãƒ­ãƒ€ã‚¯ãƒˆã®ãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«ã¸ã®ã‚¢ã‚¯ã‚»ã‚¹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã€‚
      */
     private final BlancoValueObjectPhpResourceBundle fBundle = new BlancoValueObjectPhpResourceBundle();
 
@@ -41,17 +41,17 @@ public class BlancoValueObjectPhpProcessImpl implements
                         .getAnttaskErr001(input.getMetadir()));
             }
 
-            // ƒeƒ“ƒ|ƒ‰ƒŠƒfƒBƒŒƒNƒgƒŠ‚ğì¬B
+            // ãƒ†ãƒ³ãƒãƒ©ãƒªãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ä½œæˆã€‚
             new File(input.getTmpdir()
                     + BlancoValueObjectPhpConstants.TARGET_SUBDIRECTORY)
                     .mkdirs();
 
-            // w’è‚³‚ê‚½ƒƒ^ƒfƒBƒŒƒNƒgƒŠ‚ğˆ—‚µ‚Ü‚·B
+            // æŒ‡å®šã•ã‚ŒãŸãƒ¡ã‚¿ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’å‡¦ç†ã—ã¾ã™ã€‚
             new BlancoValueObjectPhpMeta2Xml()
                     .processDirectory(fileMetadir, input.getTmpdir()
                             + BlancoValueObjectPhpConstants.TARGET_SUBDIRECTORY);
 
-            // XML‰»‚³‚ê‚½’†ŠÔƒtƒ@ƒCƒ‹‚©‚çƒ\[ƒXƒR[ƒh‚ğ¶¬
+            // XMLåŒ–ã•ã‚ŒãŸä¸­é–“ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã‚’ç”Ÿæˆ
             final File[] fileMeta2 = new File(input.getTmpdir()
                     + BlancoValueObjectPhpConstants.TARGET_SUBDIRECTORY)
                     .listFiles();

@@ -8,7 +8,7 @@
 	<property name="project.zip" value="${project}-${version}-src.zip" />
 	<property name="project.main.jar" value="blancovalueobjectphp-${version}.jar" />
 
-	<property name="encoding" value="Windows-31J" />
+	<property name="encoding" value="UTF-8" />
 	<property name="eclipse.dir" value="C:/Program Files/eclipse" />
 
 	<!-- Antタスク定義 begin -->
@@ -112,7 +112,7 @@
 			<classpath>
 				<!-- ワイルドカードで一括取り込み -->
 				<fileset dir="lib" includes="*.jar" />
-				<pathelement path="${eclipse.dir}/plugins/org.junit_3.8.2.v20080602-1318/junit.jar" />
+				<!-- pathelement path="${eclipse.dir}/plugins/org.junit_3.8.2.v20080602-1318/junit.jar" / -->
 			</classpath>
 			<include name="**/*.java" />
 		</javac>
@@ -144,5 +144,18 @@
 
 	<target name="build" depends="meta,compile,jar,pack">
 	</target>
+
+	<target name="cleanblanco">
+		<delete dir="blanco" />
+		<delete dir="blanco.php" />
+		<delete dir="tmp" />
+	</target>
+
+	<target name="cleanjava">
+		<delete dir="bin" />
+		<delete dir="classes" />
+	</target>
+
+	<target name="clean" depends="cleanjava, cleanblanco" />
 
 </project>
