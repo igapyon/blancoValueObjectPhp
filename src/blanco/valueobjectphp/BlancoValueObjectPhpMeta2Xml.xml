@@ -8,6 +8,9 @@
         <propertykey name="name" waitX="2">
           <value>クラス名</value>
         </propertykey>
+        <propertykey name="namespace" waitX="2">
+          <value>名前空間</value>
+        </propertykey>
         <propertykey name="package" waitX="2">
           <value>パッケージ</value>
         </propertykey>
@@ -16,6 +19,13 @@
         </propertykey>
         <propertykey name="fileDescription" waitX="2">
           <value>ファイル説明</value>
+        </propertykey>
+      </propertyblock>
+
+      <propertyblock name="blancovalueobjectphp-extends" waitY="1">
+        <startstring>バリューオブジェクト定義(php)・継承</startstring>
+        <propertykey name="name" waitX="2">
+          <value>クラス名</value>
         </propertykey>
       </propertyblock>
 

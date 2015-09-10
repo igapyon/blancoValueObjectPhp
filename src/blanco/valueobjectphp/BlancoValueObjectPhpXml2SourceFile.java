@@ -11,16 +11,15 @@ package blanco.valueobjectphp;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import blanco.cg.BlancoCgObjectFactory;
 import blanco.cg.BlancoCgSupportedLang;
+import blanco.cg.BlancoCgTransformer;
 import blanco.cg.transformer.BlancoCgTransformerFactory;
 import blanco.cg.util.BlancoCgLineUtil;
-import blanco.cg.valueobject.BlancoCgClass;
-import blanco.cg.valueobject.BlancoCgField;
-import blanco.cg.valueobject.BlancoCgMethod;
-import blanco.cg.valueobject.BlancoCgSourceFile;
+import blanco.cg.valueobject.*;
 import blanco.commons.util.BlancoJavaSourceUtil;
 import blanco.commons.util.BlancoNameAdjuster;
 import blanco.commons.util.BlancoStringUtil;
@@ -135,13 +134,18 @@ public class BlancoValueObjectPhpXml2SourceFile {
                 continue;
             }
 
+            // 継承情報を取得します。
+            final BlancoXmlElement elementExtends = BlancoXmlBindingUtil
+                    .getElement(elementSheet, fBundle
+                            .getMeta2xmlElementExtends());
+
             // 一覧情報を取得します。
             final BlancoXmlElement elementList = BlancoXmlBindingUtil
                     .getElement(elementSheet, fBundle.getMeta2xmlElementList());
 
             // シートから詳細な情報を取得します。
             final BlancoValueObjectPhpStructure processStructure = parseSheet(
-                    elementCommon, elementList, argDirectoryTarget);
+                    elementCommon, elementExtends, elementList, argDirectoryTarget);
 
             if (processStructure != null) {
                 // メタ情報の解析結果をもとにソースコード自動生成を実行します。
@@ -155,6 +159,7 @@ public class BlancoValueObjectPhpXml2SourceFile {
      * 
      * @param argElementCommon
      *            現在処理しているCommonノード。
+     * @param argElementExtends
      * @param argElementList
      *            現在処理しているListノード。
      * @param argDirectoryTarget
@@ -163,11 +168,14 @@ public class BlancoValueObjectPhpXml2SourceFile {
      */
     private BlancoValueObjectPhpStructure parseSheet(
             final BlancoXmlElement argElementCommon,
-            final BlancoXmlElement argElementList, final File argDirectoryTarget) {
+            BlancoXmlElement argElementExtends, final BlancoXmlElement argElementList, final File argDirectoryTarget) {
 
         final BlancoValueObjectPhpStructure processStructure = new BlancoValueObjectPhpStructure();
+
         processStructure.setName(BlancoXmlBindingUtil.getTextContent(
                 argElementCommon, "name"));
+        processStructure.setNamespace(BlancoXmlBindingUtil.getTextContent(
+                argElementCommon, "namespace"));
         processStructure.setPackage(BlancoXmlBindingUtil.getTextContent(
                 argElementCommon, "package"));
 
@@ -187,6 +195,11 @@ public class BlancoValueObjectPhpXml2SourceFile {
                 "fileDescription") != null) {
             processStructure.setFileDescription(BlancoXmlBindingUtil
                     .getTextContent(argElementCommon, "fileDescription"));
+        }
+
+        if (argElementExtends != null) {
+            processStructure.setExtends(BlancoXmlBindingUtil.getTextContent(
+                    argElementExtends, "name"));
         }
 
         if (argElementList == null) {
@@ -267,9 +280,22 @@ public class BlancoValueObjectPhpXml2SourceFile {
         fCgSourceFile = fCgFactory.createSourceFile(argProcessStructure
                 .getPackage(), "このソースコードは blanco Frameworkによって自動生成されています。");
         fCgSourceFile.setEncoding(fEncoding);
+
         fCgClass = fCgFactory.createClass(argProcessStructure.getName(),
                 BlancoStringUtil.null2Blank(argProcessStructure
                         .getDescription()));
+
+
+
+        String superClass = argProcessStructure.getExtends();
+        if (superClass != null && superClass.length() != 0) {
+            // 指定されたクラスを継承
+            BlancoCgType fCgType = new BlancoCgType();
+            fCgType.setName(superClass);
+            fCgClass.setExtendClassList(new ArrayList());
+            fCgClass.getExtendClassList().add(fCgType);
+        }
+
         fCgSourceFile.getClassList().add(fCgClass);
 
         if (argProcessStructure.getFileDescription() != null) {
@@ -278,6 +304,9 @@ public class BlancoValueObjectPhpXml2SourceFile {
         }
 
         expandValueObject(argProcessStructure);
+
+        // required 文を出力しない ... 将来的には xls で指定するように？
+        fCgSourceFile.setIsImport(false);
 
         BlancoCgTransformerFactory.getSourceTransformer(fTargetLang).transform(
                 fCgSourceFile, fileBlancoMain);
