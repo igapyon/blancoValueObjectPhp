@@ -331,6 +331,8 @@ public class BlancoValueObjectPhpXml2SourceFile {
             expandMethodSet(argProcessStructure, fieldLook);
 
             expandMethodGet(argProcessStructure, fieldLook);
+
+            expandMethodType(argProcessStructure, fieldLook);
         }
 
         expandMethodToString(argProcessStructure);
@@ -470,6 +472,51 @@ public class BlancoValueObjectPhpXml2SourceFile {
                 .add("return "
                         + BlancoCgLineUtil.getVariablePrefix(fTargetLang)
                         + "this->" + "f" + fieldName
+                        + BlancoCgLineUtil.getTerminator(fTargetLang));
+    }
+
+    /**
+     * typeメソッドを展開します。
+     *
+     * @param argProcessStructure
+     */
+    private void expandMethodType(
+            final BlancoValueObjectPhpStructure argProcessStructure,
+            final BlancoValueObjectPhpFieldStructure fieldLook) {
+        String fieldName = fieldLook.getName();
+        if (fNameAdjust) {
+            fieldName = BlancoNameAdjuster.toClassName(fieldName);
+        }
+
+        final BlancoCgMethod cgMethod = fCgFactory.createMethod("type"
+                + fieldName, fBundle.getXml2sourceFileTypeLangdoc01(fieldLook
+                .getName()));
+        fCgClass.getMethodList().add(cgMethod);
+        cgMethod.setAccess("public");
+
+        cgMethod.getLangDoc().getDescriptionList().add(
+                fBundle.getXml2sourceFileTypeLangdoc02(fieldLook.getType()));
+
+        cgMethod.setReturn(fCgFactory.createReturn(fieldLook.getType(), fBundle
+                .getXml2sourceFileTypeReturnLangdoc(fieldLook.getName())));
+
+        if (fieldLook.getDefault() != null) {
+            cgMethod.getLangDoc().getDescriptionList().add(
+                    fBundle.getXml2sourceFileTypeArgLangdoc(fieldLook
+                            .getDefault()));
+        }
+
+        if (BlancoStringUtil.null2Blank(fieldLook.getDescription()).length() > 0) {
+            cgMethod.getLangDoc().getDescriptionList().add(
+                    fieldLook.getDescription());
+        }
+
+        // メソッドの実装
+        final List<String> listLine = cgMethod.getLineList();
+
+        listLine
+                .add("return "
+                        + "\"" + fieldLook.getType() + "\""
                         + BlancoCgLineUtil.getTerminator(fTargetLang));
     }
 
