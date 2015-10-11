@@ -1,33 +1,33 @@
 2009.11.06 (0.0.7)
-  (jar)jar�t�@�C���ނ̍X�V�B
-  encoding ���w��ł���悤�ɋ@�\�����B
+  (jar)jarファイル類の更新。
+  encoding を指定できるように機能強化。
 
-2007.12.24 (0.0.6) Eclipse 3.3 �΍�
-  ������Ɍ��� plugin�̂݃o�[�W�����ԍ��̔Ԃ̂��������[�X���܂��B
-  (plugin)�o�[�W�����ԍ����̔ԍX�V�B
-  (plugin) workbenchMonitor�𗘗p����̂��~���܂����B
-    ������́AEclipse 3.3 �� workbenchMonitor �𗘗p����� org.eclipse.swt.SWTException: Invalid thread access ���������Ă��܂��̂ŁA���������邽�߂ł��B
-  (plugin)about.html���X�V�B
-  (plugin)build.xml���X�V�B
-  (plugin)plugin.xml�̍Đ���
-  (plugin)�E�B�U�[�h�̐����f�B���N�g���Ɋւ���L�q���X�V (Blanco*WizardPage4)
-  (jar)jar�t�@�C���ނ��X�V�`�F�b�N�B
+2007.12.24 (0.0.6) Eclipse 3.3 対策
+  ※今回に限り pluginのみバージョン番号採番のうえリリースします。
+  (plugin)バージョン番号を採番更新。
+  (plugin) workbenchMonitorを利用するのを停止しました。
+    →これは、Eclipse 3.3 で workbenchMonitor を利用すると org.eclipse.swt.SWTException: Invalid thread access が発生してしまうので、これを避けるためです。
+  (plugin)about.htmlを更新。
+  (plugin)build.xmlを更新。
+  (plugin)plugin.xmlの再生成
+  (plugin)ウィザードの生成ディレクトリに関する記述を更新 (Blanco*WizardPage4)
+  (jar)jarファイル類を更新チェック。
 
 2006.12.27 (0.0.5)
-  (jar)jar�t�@�C���ނ̍X�V�B
-  build.xml�t�@�C����blancoAnt�ɂ��X�V�B
+  (jar)jarファイル類の更新。
+  build.xmlファイルをblancoAntにより更新。
 
 2006.12.05 (0.0.4)
-  �\���̓n���ɂ��\�[�X�R�[�h���������̂��߁A�ЂƂ̃��\�b�h��public�����܂����B
+  構造体渡しによるソースコード自動生成のため、ひとつのメソッドをpublic化しました。
 
 2006.11.22 (0.0.3)
-  (blancoCg)(PHP)���\�b�h�̈����`�F�b�N�@�\�ɂ��āA�w��̌^�ȊO��NULL��^���Ă��ǂ��悤�Ɏd�l�ύX�B
-  (jar)blancoMessage��jar�t�@�C�����s�v�������̂ō폜���܂����B
+  (blancoCg)(PHP)メソッドの引数チェック機能について、指定の型以外にNULLを与えても良いように仕様変更。
+  (jar)blancoMessageのjarファイルが不要だったので削除しました。
 
 2006.11.21 (0.0.2)
-  (plugin)Eclipse�v���O�C���̍쐬�B
-  �T���v�����g�[�B
-  (jar)blancoCg���X�V�B
+  (plugin)Eclipseプラグインの作成。
+  サンプルを拡充。
+  (jar)blancoCgを更新。
 
 2006.11.20 (0.0.1)
-  �V�K�쐬
+  新規作成

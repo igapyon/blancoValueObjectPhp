@@ -1,6 +1,6 @@
 /*
- * ���̃\�[�X�R�[�h�� blanco Framework�ɂ���Ď�����������Ă��܂��B
- * Apache Ant�^�X�N [BlancoValueObjectPhp]�̒��ېe�N���X
+ * このソースコードは blanco Frameworkによって自動生成されています。
+ * Apache Antタスク [BlancoValueObjectPhp]の抽象親クラス
  */
 package blanco.valueobjectphp.task;
 
@@ -8,13 +8,13 @@ import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.Task;
 
 /**
- * Apache Ant�^�X�N [BlancoValueObjectPhp]�̒��ېe�N���X�B
+ * Apache Antタスク [BlancoValueObjectPhp]の抽象親クラス。
  *
- * �o�����[�I�u�W�F�N�g��`������o�����[�I�u�W�F�N�g�N���X�������������邽�߂�AntTask�ł��B<br>
- * ���̒��ېe�N���X�ł́AApache Ant�^�X�N�ň�ʓI�ɕK�v�ȃ`�F�b�N�Ȃǂ̃R�[�f�B���O�������肵�܂��B
- * ���̃N���X���p�����āA�p�b�P�[�W[blanco.valueobjectphp.task]��BlancoValueObjectPhpTask�N���X���쐬���Ă��������B������Ant�^�X�N�̏������e���L�q���Ă��������B<br>
+ * バリューオブジェクト定義書からバリューオブジェクトクラスを自動生成するためのAntTaskです。<br>
+ * この抽象親クラスでは、Apache Antタスクで一般的に必要なチェックなどのコーディングを肩代わりします。
+ * このクラスを継承して、パッケージ[blanco.valueobjectphp.task]にBlancoValueObjectPhpTaskクラスを作成してください。そしてAntタスクの処理内容を記述してください。<br>
  * <br>
- * Ant�^�X�N�ւ̑g�ݍ��ݗ�<br>
+ * Antタスクへの組み込み例<br>
  * <pre>
  * &lt;taskdef name=&quot;blancovalueobjectphp&quot; classname=&quot;blanco.valueobjectphp.task.BlancoValueObjectPhpTask">
  *     &lt;classpath&gt;
@@ -26,189 +26,189 @@ import org.apache.tools.ant.Task;
  */
 public abstract class AbstractBlancoValueObjectPhpTask extends Task {
     /**
-     * Verbose���[�h�œ��삳���邩�ǂ����B
+     * Verboseモードで動作させるかどうか。
      */
     private String fVerbose = "false";
 
     /**
-     * Ant�^�X�N��[metadir]�A�g���r���[�g�B
+     * Antタスクの[metadir]アトリビュート。
      *
-     * ���ڔԍ�: 1<br>
-     * ���^�f�B���N�g���Bxls�t�@�C���̊i�[��܂��� xml�t�@�C���̊i�[����w�肵�܂��B<br>
-     * �K�{����<br>
+     * 項目番号: 1<br>
+     * メタディレクトリ。xlsファイルの格納先または xmlファイルの格納先を指定します。<br>
+     * 必須項目<br>
      */
     private String fMetadir;
 
     /**
-     * Ant�^�X�N��[targetdir]�A�g���r���[�g�B
+     * Antタスクの[targetdir]アトリビュート。
      *
-     * ���ڔԍ�: 2<br>
-     * �o�͐�t�H���_���w�肵�܂��B���w��̏ꍇ�ɂ̓J�����g������blanco��p���܂��B<br>
+     * 項目番号: 2<br>
+     * 出力先フォルダを指定します。無指定の場合にはカレント直下のblancoを用います。<br>
      */
     private String fTargetdir;
 
     /**
-     * Ant�^�X�N��[tmpdir]�A�g���r���[�g�B
+     * Antタスクの[tmpdir]アトリビュート。
      *
-     * ���ڔԍ�: 3<br>
-     * �e���|�����f�B���N�g�����w�肵�܂��B���w��̏ꍇ�ɂ̓J�����g������tmp��p���܂��B<br>
+     * 項目番号: 3<br>
+     * テンポラリディレクトリを指定します。無指定の場合にはカレント直下のtmpを用います。<br>
      */
     private String fTmpdir;
 
     /**
-     * Ant�^�X�N��[nameAdjust]�A�g���r���[�g�B
+     * Antタスクの[nameAdjust]アトリビュート。
      *
-     * ���ڔԍ�: 4<br>
-     * �t�B�[���h���⃁�\�b�h���𖼑O�ό`�����{���邩�ǂ����B<br>
+     * 項目番号: 4<br>
+     * フィールド名やメソッド名を名前変形を実施するかどうか。<br>
      */
     private String fNameAdjust;
 
     /**
-     * Verbose���[�h�œ��삳���邩�ǂ����B
+     * Verboseモードで動作させるかどうか。
      *
-     * @param arg Verbose���[�h�œ��삳���邩�ǂ����B
+     * @param arg Verboseモードで動作させるかどうか。
      */
     public void setVerbose(final String arg) {
         fVerbose = arg;
     }
 
     /**
-     * Verbose���[�h�œ��삳���邩�ǂ����B
+     * Verboseモードで動作させるかどうか。
      *
-     * @return Verbose���[�h�œ��삳���邩�ǂ����B
+     * @return Verboseモードで動作させるかどうか。
      */
     public String getVerbose() {
         return fVerbose;
     }
 
     /**
-     * Ant�^�X�N��[metadir]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[metadir]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 1<br>
-     * ���^�f�B���N�g���Bxls�t�@�C���̊i�[��܂��� xml�t�@�C���̊i�[����w�肵�܂��B<br>
+     * 項目番号: 1<br>
+     * メタディレクトリ。xlsファイルの格納先または xmlファイルの格納先を指定します。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setMetadir(final String arg) {
         fMetadir = arg;
     }
 
     /**
-     * Ant�^�X�N��[metadir]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[metadir]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 1<br>
-     * ���^�f�B���N�g���Bxls�t�@�C���̊i�[��܂��� xml�t�@�C���̊i�[����w�肵�܂��B<br>
-     * �K�{�A�g���r���[�g�ł��BApache Ant�^�X�N��ŕK���l���w�肳��܂��B<br>
+     * 項目番号: 1<br>
+     * メタディレクトリ。xlsファイルの格納先または xmlファイルの格納先を指定します。<br>
+     * 必須アトリビュートです。Apache Antタスク上で必ず値が指定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getMetadir() {
         return fMetadir;
     }
 
     /**
-     * Ant�^�X�N��[targetdir]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[targetdir]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 2<br>
-     * �o�͐�t�H���_���w�肵�܂��B���w��̏ꍇ�ɂ̓J�����g������blanco��p���܂��B<br>
+     * 項目番号: 2<br>
+     * 出力先フォルダを指定します。無指定の場合にはカレント直下のblancoを用います。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setTargetdir(final String arg) {
         fTargetdir = arg;
     }
 
     /**
-     * Ant�^�X�N��[targetdir]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[targetdir]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 2<br>
-     * �o�͐�t�H���_���w�肵�܂��B���w��̏ꍇ�ɂ̓J�����g������blanco��p���܂��B<br>
-     * �f�t�H���g�l[blanco]���ݒ肳��Ă��܂��BApache Ant�^�X�N��ŃA�g���r���[�g�̎w�肪�����ꍇ�ɂ́A�f�t�H���g�l���ݒ肳��܂��B<br>
+     * 項目番号: 2<br>
+     * 出力先フォルダを指定します。無指定の場合にはカレント直下のblancoを用います。<br>
+     * デフォルト値[blanco]が設定されています。Apache Antタスク上でアトリビュートの指定が無い場合には、デフォルト値が設定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getTargetdir() {
         return fTargetdir;
     }
 
     /**
-     * Ant�^�X�N��[tmpdir]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[tmpdir]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 3<br>
-     * �e���|�����f�B���N�g�����w�肵�܂��B���w��̏ꍇ�ɂ̓J�����g������tmp��p���܂��B<br>
+     * 項目番号: 3<br>
+     * テンポラリディレクトリを指定します。無指定の場合にはカレント直下のtmpを用います。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setTmpdir(final String arg) {
         fTmpdir = arg;
     }
 
     /**
-     * Ant�^�X�N��[tmpdir]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[tmpdir]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 3<br>
-     * �e���|�����f�B���N�g�����w�肵�܂��B���w��̏ꍇ�ɂ̓J�����g������tmp��p���܂��B<br>
-     * �f�t�H���g�l[tmp]���ݒ肳��Ă��܂��BApache Ant�^�X�N��ŃA�g���r���[�g�̎w�肪�����ꍇ�ɂ́A�f�t�H���g�l���ݒ肳��܂��B<br>
+     * 項目番号: 3<br>
+     * テンポラリディレクトリを指定します。無指定の場合にはカレント直下のtmpを用います。<br>
+     * デフォルト値[tmp]が設定されています。Apache Antタスク上でアトリビュートの指定が無い場合には、デフォルト値が設定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getTmpdir() {
         return fTmpdir;
     }
 
     /**
-     * Ant�^�X�N��[nameAdjust]�A�g���r���[�g�̃Z�b�^�[���\�b�h�B
+     * Antタスクの[nameAdjust]アトリビュートのセッターメソッド。
      *
-     * ���ڔԍ�: 4<br>
-     * �t�B�[���h���⃁�\�b�h���𖼑O�ό`�����{���邩�ǂ����B<br>
+     * 項目番号: 4<br>
+     * フィールド名やメソッド名を名前変形を実施するかどうか。<br>
      *
-     * @param arg �Z�b�g�������l
+     * @param arg セットしたい値
      */
     public void setNameAdjust(final String arg) {
         fNameAdjust = arg;
     }
 
     /**
-     * Ant�^�X�N��[nameAdjust]�A�g���r���[�g�̃Q�b�^�[���\�b�h�B
+     * Antタスクの[nameAdjust]アトリビュートのゲッターメソッド。
      *
-     * ���ڔԍ�: 4<br>
-     * �t�B�[���h���⃁�\�b�h���𖼑O�ό`�����{���邩�ǂ����B<br>
-     * �f�t�H���g�l[true]���ݒ肳��Ă��܂��BApache Ant�^�X�N��ŃA�g���r���[�g�̎w�肪�����ꍇ�ɂ́A�f�t�H���g�l���ݒ肳��܂��B<br>
+     * 項目番号: 4<br>
+     * フィールド名やメソッド名を名前変形を実施するかどうか。<br>
+     * デフォルト値[true]が設定されています。Apache Antタスク上でアトリビュートの指定が無い場合には、デフォルト値が設定されます。<br>
      *
-     * @return ���̃t�B�[���h�̒l
+     * @return このフィールドの値
      */
     public String getNameAdjust() {
         return fNameAdjust;
     }
 
     /**
-     * ���ۂ�AntTask�̏����ɂ��āA���̃��\�b�h���I�[�o�[���C�h���܂��B
+     * 実際のAntTaskの処理について、このメソッドをオーバーライドします。
      *
-     * @throws IllegalArgumentException ��������o�͂Ȃǂɂ��ė�O�����������ꍇ�B
+     * @throws IllegalArgumentException 引数や入出力などについて例外が発生した場合。
      */
     protected abstract void process() throws IllegalArgumentException;
 
     /**
-     * Ant�^�X�N�̃��C�������BApache Ant���� ���̃��\�b�h���Ăяo����܂��B
+     * Antタスクのメイン処理。Apache Antから このメソッドが呼び出されます。
      *
-     * @throws BuildException �^�X�N�Ƃ��Ă̗�O�����������ꍇ�B
+     * @throws BuildException タスクとしての例外が発生した場合。
      */
     public final void execute() throws BuildException {
         System.out.println("BlancoValueObjectPhpTask begin.");
 
-        // ���ڔԍ�[1]�A�A�g���r���[�g[metadir]�͕K�{���͂ł��B���̓`�F�b�N���s���܂��B
+        // 項目番号[1]、アトリビュート[metadir]は必須入力です。入力チェックを行います。
         if (getMetadir() == null) {
-            throw new BuildException("�A�g���r���[�g[metadir]���ݒ肳��Ă��܂���B�����𒆒f���܂��B");
+            throw new BuildException("アトリビュート[metadir]が設定されていません。処理を中断します。");
         }
-        // ���ڔԍ�[2]�A�A�g���r���[�g[targetdir]�ɂ̓f�t�H���g���ݒ肳��Ă��܂��B���͂�null�̏ꍇ�ɂ̓f�t�H���g�l���Z�b�g���܂��B
+        // 項目番号[2]、アトリビュート[targetdir]にはデフォルトが設定されています。入力がnullの場合にはデフォルト値をセットします。
         if (getTargetdir() == null) {
             setTargetdir("blanco");
         }
-        // ���ڔԍ�[3]�A�A�g���r���[�g[tmpdir]�ɂ̓f�t�H���g���ݒ肳��Ă��܂��B���͂�null�̏ꍇ�ɂ̓f�t�H���g�l���Z�b�g���܂��B
+        // 項目番号[3]、アトリビュート[tmpdir]にはデフォルトが設定されています。入力がnullの場合にはデフォルト値をセットします。
         if (getTmpdir() == null) {
             setTmpdir("tmp");
         }
-        // ���ڔԍ�[4]�A�A�g���r���[�g[nameAdjust]�ɂ̓f�t�H���g���ݒ肳��Ă��܂��B���͂�null�̏ꍇ�ɂ̓f�t�H���g�l���Z�b�g���܂��B
+        // 項目番号[4]、アトリビュート[nameAdjust]にはデフォルトが設定されています。入力がnullの場合にはデフォルト値をセットします。
         if (getNameAdjust() == null) {
             setNameAdjust("true");
         }
@@ -222,7 +222,7 @@ public abstract class AbstractBlancoValueObjectPhpTask extends Task {
         }
 
         try {
-            // ���ۂ�Ant�^�X�N�̎又�������s���܂��B
+            // 実際のAntタスクの主処理を実行します。
             process();
         } catch (IllegalArgumentException e) {
             if ("true".equals(getVerbose())) {
@@ -231,10 +231,10 @@ public abstract class AbstractBlancoValueObjectPhpTask extends Task {
             throw new BuildException(e.getMessage());
         } catch (Exception e) {
             e.printStackTrace();
-            throw new BuildException("�^�X�N���������ɗ�O���������܂����B�����𒆒f���܂��B" + e.toString());
+            throw new BuildException("タスクを処理中に例外が発生しました。処理を中断します。" + e.toString());
         } catch (Error e) {
             e.printStackTrace();
-            throw new BuildException("�^�X�N���������ɃG���[���������܂����B�����𒆒f���܂��B" + e.toString());
+            throw new BuildException("タスクを処理中にエラーが発生しました。処理を中断します。" + e.toString());
         }
     }
 }

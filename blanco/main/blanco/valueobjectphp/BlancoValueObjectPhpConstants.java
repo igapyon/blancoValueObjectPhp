@@ -1,33 +1,33 @@
 /*
- * ���̃\�[�X�R�[�h�� blanco Framework�ɂ�莩����������܂����B
+ * このソースコードは blanco Frameworkにより自動生成されました。
  */
 package blanco.valueobjectphp;
 
 /**
- * BlancoValueObjectPhp �����p����萔��~���܂��B
+ * BlancoValueObjectPhp が利用する定数を蓄えます。
  */
 public class BlancoValueObjectPhpConstants {
     /**
-     * ���ڔԍ�:1<br>
-     * �v���_�N�g���B�p���Ŏw�肵�܂��B
+     * 項目番号:1<br>
+     * プロダクト名。英字で指定します。
      */
     public static final String PRODUCT_NAME = "blancoValueObjectPhp";
 
     /**
-     * ���ڔԍ�:2<br>
-     * �v���_�N�g���̏������ŁB�p���Ŏw�肵�܂��B
+     * 項目番号:2<br>
+     * プロダクト名の小文字版。英字で指定します。
      */
     public static final String PRODUCT_NAME_LOWER = "blancovalueobjectphp";
 
     /**
-     * ���ڔԍ�:3<br>
-     * �o�[�W�����ԍ��B
+     * 項目番号:3<br>
+     * バージョン番号。
      */
     public static final String VERSION = "0.0.7";
 
     /**
-     * ���ڔԍ�:4<br>
-     * �����̉ߒ��ŗ��p�����T�u�f�B���N�g���B
+     * 項目番号:4<br>
+     * 処理の過程で利用されるサブディレクトリ。
      */
     public static final String TARGET_SUBDIRECTORY = "/valueobjectphp";
 }

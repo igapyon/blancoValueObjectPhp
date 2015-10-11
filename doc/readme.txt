@@ -1,27 +1,27 @@
-blancoValueObjectPhp‚Í uƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg’è‹`‘(php)v‚Æ‚¢‚¤Excel—lŽ®‚ð‹L“ü‚·‚é‚¾‚¯‚Å ŠÈ’P‚É ƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg ƒNƒ‰ƒXEƒ\[ƒXƒR[ƒh‚ªì¬‚Å‚«‚é‚æ‚¤‚É‚·‚é‚½‚ß‚Ìƒc[ƒ‹‚Å‚·B
-PHP‚Ìƒ\[ƒXƒR[ƒhŽ©“®¶¬‚É‘Î‰ž‚µ‚Ä‚¢‚Ü‚·B
-‰Á‚¦‚ÄAblancoValueObjectPhp‚ð“±“ü‚·‚é‚ÆAÝŒv‘‚Æƒ\[ƒXƒR[ƒh‚ªŽ©“®“I‚É“¯Šú‰»‚³‚ê‚é‚Æ‚¢‚¤Œø‰Ê‚ª‚ ‚è‚Ü‚·B
+blancoValueObjectPhpã¯ ã€Œãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå®šç¾©æ›¸(php)ã€ã¨ã„ã†Excelæ§˜å¼ã‚’è¨˜å…¥ã™ã‚‹ã ã‘ã§ ç°¡å˜ã« ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ ã‚¯ãƒ©ã‚¹ãƒ»ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ãŒä½œæˆã§ãã‚‹ã‚ˆã†ã«ã™ã‚‹ãŸã‚ã®ãƒ„ãƒ¼ãƒ«ã§ã™ã€‚
+PHPã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰è‡ªå‹•ç”Ÿæˆã«å¯¾å¿œã—ã¦ã„ã¾ã™ã€‚
+åŠ ãˆã¦ã€blancoValueObjectPhpã‚’å°Žå…¥ã™ã‚‹ã¨ã€è¨­è¨ˆæ›¸ã¨ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ãŒè‡ªå‹•çš„ã«åŒæœŸåŒ–ã•ã‚Œã‚‹ã¨ã„ã†åŠ¹æžœãŒã‚ã‚Šã¾ã™ã€‚
 
-[ŠJ”­ŽÒ]
- 1.ˆÉ‰ê•qŽ÷ (Tosiki Iga / ‚¢‚ª‚Ò‚å‚ñ): ŠJ”­‚¨‚æ‚ÑˆÛŽƒƒ“ƒe’S“–
- 2.ŽR–{kŽi (Y-moto) : Žd—lŒˆ’è‚¨‚æ‚ÑƒŠƒŠ[ƒX”»’è’S“–
+[é–‹ç™ºè€…]
+ 1.ä¼Šè³€æ•æ¨¹ (Tosiki Iga / ã„ãŒã´ã‚‡ã‚“): é–‹ç™ºãŠã‚ˆã³ç¶­æŒãƒ¡ãƒ³ãƒ†æ‹…å½“
+ 2.å±±æœ¬è€•å¸ (Y-moto) : ä»•æ§˜æ±ºå®šãŠã‚ˆã³ãƒªãƒªãƒ¼ã‚¹åˆ¤å®šæ‹…å½“
 
-[ƒ‰ƒCƒZƒ“ƒX]
- 1.blancoValueObjectPhp ‚Í ƒ‰ƒCƒZƒ“ƒX ‚Æ‚µ‚Ä GNU Lesser General Public License ‚ðÌ—p‚µ‚Ä‚¢‚Ü‚·B
+[ãƒ©ã‚¤ã‚»ãƒ³ã‚¹]
+ 1.blancoValueObjectPhp ã¯ ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ ã¨ã—ã¦ GNU Lesser General Public License ã‚’æŽ¡ç”¨ã—ã¦ã„ã¾ã™ã€‚
 
-[ˆË‘¶‚·‚éƒ‰ƒCƒuƒ‰ƒŠ]
-blancoValueObjectPhp‚Í‰º‹L‚Ìƒ‰ƒCƒuƒ‰ƒŠ‚ð—˜—p‚µ‚Ä‚¢‚Ü‚·B
-¦ŠeƒI[ƒvƒ“ƒ\[ƒXEƒvƒƒ_ƒNƒg‚Ì’ñ‹ŸŽÒ‚ÉŠ´ŽÓ‚µ‚Ü‚·B
+[ä¾å­˜ã™ã‚‹ãƒ©ã‚¤ãƒ–ãƒ©ãƒª]
+blancoValueObjectPhpã¯ä¸‹è¨˜ã®ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã‚’åˆ©ç”¨ã—ã¦ã„ã¾ã™ã€‚
+â€»å„ã‚ªãƒ¼ãƒ—ãƒ³ã‚½ãƒ¼ã‚¹ãƒ»ãƒ—ãƒ­ãƒ€ã‚¯ãƒˆã®æä¾›è€…ã«æ„Ÿè¬ã—ã¾ã™ã€‚
  1.JExcelApi - Java Excel API - A Java API to read, write and modify Excel spreadsheets
      http://jexcelapi.sourceforge.net/
      http://sourceforge.net/projects/jexcelapi/
      http://www.andykhan.com/jexcelapi/ 
-   ŠT—v: Java‚©‚çExcelƒuƒbƒNŒ`Ž®‚ð“Ç‚Ý‘‚«‚·‚é‚½‚ß‚Ìƒ‰ƒCƒuƒ‰ƒŠ‚Å‚·B
-   ƒ‰ƒCƒZƒ“ƒX: GNU Lesser General Public License
+   æ¦‚è¦: Javaã‹ã‚‰Excelãƒ–ãƒƒã‚¯å½¢å¼ã‚’èª­ã¿æ›¸ãã™ã‚‹ãŸã‚ã®ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã§ã™ã€‚
+   ãƒ©ã‚¤ã‚»ãƒ³ã‚¹: GNU Lesser General Public License
  2.blancoCg
-   ŠT—v: ƒ\[ƒXƒR[ƒh¶¬ƒ‰ƒCƒuƒ‰ƒŠ
-   ƒ‰ƒCƒZƒ“ƒX: GNU Lesser General Public License
- 3.‚»‚Ì‘¼‚Ì blanco Framework
-   ŠT—v: ‚±‚Ìƒvƒƒ_ƒNƒg‚Í ‚»‚êŽ©g‚ª blanco Framework‚É‚æ‚èŽ©“®¶¬‚³‚ê‚Ä‚¢‚Ü‚·B
-         ‚±‚Ìƒvƒƒ_ƒNƒg‚Í ŽÀsŽž‚É blanco FrameworkŠeŽíƒvƒƒ_ƒNƒg‚ÉˆË‘¶‚µ‚Ä“®ì‚µ‚Ü‚·B
-   ƒ‰ƒCƒZƒ“ƒX: GNU Lesser General Public License
+   æ¦‚è¦: ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ç”Ÿæˆãƒ©ã‚¤ãƒ–ãƒ©ãƒª
+   ãƒ©ã‚¤ã‚»ãƒ³ã‚¹: GNU Lesser General Public License
+ 3.ãã®ä»–ã® blanco Framework
+   æ¦‚è¦: ã“ã®ãƒ—ãƒ­ãƒ€ã‚¯ãƒˆã¯ ãã‚Œè‡ªèº«ãŒ blanco Frameworkã«ã‚ˆã‚Šè‡ªå‹•ç”Ÿæˆã•ã‚Œã¦ã„ã¾ã™ã€‚
+         ã“ã®ãƒ—ãƒ­ãƒ€ã‚¯ãƒˆã¯ å®Ÿè¡Œæ™‚ã« blanco Frameworkå„ç¨®ãƒ—ãƒ­ãƒ€ã‚¯ãƒˆã«ä¾å­˜ã—ã¦å‹•ä½œã—ã¾ã™ã€‚
+   ãƒ©ã‚¤ã‚»ãƒ³ã‚¹: GNU Lesser General Public License

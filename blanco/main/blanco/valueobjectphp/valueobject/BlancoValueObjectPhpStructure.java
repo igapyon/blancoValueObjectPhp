@@ -1,171 +1,171 @@
 /*
- * ‚±‚Ìƒ\[ƒXƒR[ƒh‚Í blanco Framework‚É‚æ‚è©“®¶¬‚³‚ê‚Ü‚µ‚½B
+ * ã“ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã¯ blanco Frameworkã«ã‚ˆã‚Šè‡ªå‹•ç”Ÿæˆã•ã‚Œã¾ã—ãŸã€‚
  */
 package blanco.valueobjectphp.valueobject;
 
 import java.util.ArrayList;
 
 /**
- * BlancoValueObjectPhp‚Ì‚È‚©‚Å—˜—p‚³‚ê‚éValueObject‚Å‚·B
+ * BlancoValueObjectPhpã®ãªã‹ã§åˆ©ç”¨ã•ã‚Œã‚‹ValueObjectã§ã™ã€‚
  */
 public class BlancoValueObjectPhpStructure {
     /**
-     * ƒƒbƒZ[ƒW’è‹`ID‚ğw’è‚µ‚Ü‚·B•K{€–Ú‚Å‚·B
+     * ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å®šç¾©IDã‚’æŒ‡å®šã—ã¾ã™ã€‚å¿…é ˆé …ç›®ã§ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [name]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [name]ã€‚
      */
     private String fName;
 
     /**
-     * ƒpƒbƒP[ƒW–¼‚ğw’è‚µ‚Ü‚·B•K{€–Ú‚Å‚·B
+     * ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸åã‚’æŒ‡å®šã—ã¾ã™ã€‚å¿…é ˆé …ç›®ã§ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [package]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [package]ã€‚
      */
     private String fPackage;
 
     /**
-     * ƒƒbƒZ[ƒW’è‹`‚Ìà–¾‚ğ‹LÚ‚µ‚Ü‚·B
+     * ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å®šç¾©ã®èª¬æ˜ã‚’è¨˜è¼‰ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [description]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [description]ã€‚
      */
     private String fDescription;
 
     /**
-     * ƒtƒ@ƒCƒ‹à–¾
+     * ãƒ•ã‚¡ã‚¤ãƒ«èª¬æ˜
      *
-     * ƒtƒB[ƒ‹ƒh: [fileDescription]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [fileDescription]ã€‚
      */
     private String fFileDescription;
 
     /**
-     * ƒtƒB[ƒ‹ƒh‚ğ•Û‚·‚éƒŠƒXƒgB
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã‚’ä¿æŒã™ã‚‹ãƒªã‚¹ãƒˆã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [listField]B
-     * ƒfƒtƒHƒ‹ƒg: [new java.util.ArrayList<blanco.valueobjectphp.valueobject.BlancoValueObjectPhpFieldStructure>()]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [listField]ã€‚
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [new java.util.ArrayList<blanco.valueobjectphp.valueobject.BlancoValueObjectPhpFieldStructure>()]ã€‚
      */
     private ArrayList<blanco.valueobjectphp.valueobject.BlancoValueObjectPhpFieldStructure> fListField = new java.util.ArrayList<blanco.valueobjectphp.valueobject.BlancoValueObjectPhpFieldStructure>();
 
     /**
-     * ƒtƒB[ƒ‹ƒh [name] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [name] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒƒbƒZ[ƒW’è‹`ID‚ğw’è‚µ‚Ü‚·B•K{€–Ú‚Å‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å®šç¾©IDã‚’æŒ‡å®šã—ã¾ã™ã€‚å¿…é ˆé …ç›®ã§ã™ã€‚]ã€‚
      *
-     * @param argName ƒtƒB[ƒ‹ƒh[name]‚Éİ’è‚·‚é’lB
+     * @param argName ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[name]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setName(final String argName) {
         fName = argName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [name] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [name] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒƒbƒZ[ƒW’è‹`ID‚ğw’è‚µ‚Ü‚·B•K{€–Ú‚Å‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å®šç¾©IDã‚’æŒ‡å®šã—ã¾ã™ã€‚å¿…é ˆé …ç›®ã§ã™ã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[name]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[name]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getName() {
         return fName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [package] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [package] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒpƒbƒP[ƒW–¼‚ğw’è‚µ‚Ü‚·B•K{€–Ú‚Å‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸åã‚’æŒ‡å®šã—ã¾ã™ã€‚å¿…é ˆé …ç›®ã§ã™ã€‚]ã€‚
      *
-     * @param argPackage ƒtƒB[ƒ‹ƒh[package]‚Éİ’è‚·‚é’lB
+     * @param argPackage ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[package]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setPackage(final String argPackage) {
         fPackage = argPackage;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [package] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [package] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒpƒbƒP[ƒW–¼‚ğw’è‚µ‚Ü‚·B•K{€–Ú‚Å‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸åã‚’æŒ‡å®šã—ã¾ã™ã€‚å¿…é ˆé …ç›®ã§ã™ã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[package]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[package]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getPackage() {
         return fPackage;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [description] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [description] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒƒbƒZ[ƒW’è‹`‚Ìà–¾‚ğ‹LÚ‚µ‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å®šç¾©ã®èª¬æ˜ã‚’è¨˜è¼‰ã—ã¾ã™ã€‚]ã€‚
      *
-     * @param argDescription ƒtƒB[ƒ‹ƒh[description]‚Éİ’è‚·‚é’lB
+     * @param argDescription ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[description]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setDescription(final String argDescription) {
         fDescription = argDescription;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [description] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [description] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒƒbƒZ[ƒW’è‹`‚Ìà–¾‚ğ‹LÚ‚µ‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å®šç¾©ã®èª¬æ˜ã‚’è¨˜è¼‰ã—ã¾ã™ã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[description]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[description]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getDescription() {
         return fDescription;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [fileDescription] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [fileDescription] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒtƒ@ƒCƒ‹à–¾]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ•ã‚¡ã‚¤ãƒ«èª¬æ˜]ã€‚
      *
-     * @param argFileDescription ƒtƒB[ƒ‹ƒh[fileDescription]‚Éİ’è‚·‚é’lB
+     * @param argFileDescription ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[fileDescription]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setFileDescription(final String argFileDescription) {
         fFileDescription = argFileDescription;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [fileDescription] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [fileDescription] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒtƒ@ƒCƒ‹à–¾]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ•ã‚¡ã‚¤ãƒ«èª¬æ˜]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[fileDescription]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[fileDescription]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getFileDescription() {
         return fFileDescription;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [listField] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [listField] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒtƒB[ƒ‹ƒh‚ğ•Û‚·‚éƒŠƒXƒgB]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã‚’ä¿æŒã™ã‚‹ãƒªã‚¹ãƒˆã€‚]ã€‚
      *
-     * @param argListField ƒtƒB[ƒ‹ƒh[listField]‚Éİ’è‚·‚é’lB
+     * @param argListField ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[listField]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setListField(final ArrayList<blanco.valueobjectphp.valueobject.BlancoValueObjectPhpFieldStructure> argListField) {
         fListField = argListField;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [listField] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [listField] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒtƒB[ƒ‹ƒh‚ğ•Û‚·‚éƒŠƒXƒgB]B
-     * ƒfƒtƒHƒ‹ƒg: [new java.util.ArrayList<blanco.valueobjectphp.valueobject.BlancoValueObjectPhpFieldStructure>()]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã‚’ä¿æŒã™ã‚‹ãƒªã‚¹ãƒˆã€‚]ã€‚
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [new java.util.ArrayList<blanco.valueobjectphp.valueobject.BlancoValueObjectPhpFieldStructure>()]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[listField]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[listField]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public ArrayList<blanco.valueobjectphp.valueobject.BlancoValueObjectPhpFieldStructure> getListField() {
         return fListField;
     }
 
     /**
-     * ‚±‚ÌƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚Ì•¶š—ñ•\Œ»‚ğæ“¾‚µ‚Ü‚·B
+     * ã“ã®ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ–‡å­—åˆ—è¡¨ç¾ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * <P>g—pã‚Ì’ˆÓ</P>
+     * <P>ä½¿ç”¨ä¸Šã®æ³¨æ„</P>
      * <UL>
-     * <LI>ƒIƒuƒWƒFƒNƒg‚ÌƒVƒƒƒ[”ÍˆÍ‚Ì‚İ•¶š—ñ‰»‚Ìˆ—‘ÎÛ‚Æ‚È‚è‚Ü‚·B
-     * <LI>ƒIƒuƒWƒFƒNƒg‚ªzŠÂQÆ‚µ‚Ä‚¢‚éê‡‚É‚ÍA‚±‚Ìƒƒ\ƒbƒh‚Íg‚í‚È‚¢‚Å‚­‚¾‚³‚¢B
+     * <LI>ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ã‚·ãƒ£ãƒ­ãƒ¼ç¯„å›²ã®ã¿æ–‡å­—åˆ—åŒ–ã®å‡¦ç†å¯¾è±¡ã¨ãªã‚Šã¾ã™ã€‚
+     * <LI>ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒå¾ªç’°å‚ç…§ã—ã¦ã„ã‚‹å ´åˆã«ã¯ã€ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã¯ä½¿ã‚ãªã„ã§ãã ã•ã„ã€‚
      * </UL>
      *
-     * @return ƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚Ì•¶š—ñ•\Œ»B
+     * @return ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ–‡å­—åˆ—è¡¨ç¾ã€‚
      */
     @Override
     public String toString() {

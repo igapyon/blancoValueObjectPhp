@@ -33,45 +33,45 @@ import blanco.xml.bind.valueobject.BlancoXmlDocument;
 import blanco.xml.bind.valueobject.BlancoXmlElement;
 
 /**
- * uƒƒbƒZ[ƒW’è‹`‘vExcel—l®‚©‚çƒƒbƒZ[ƒW‚ğˆ—‚·‚éƒNƒ‰ƒXEƒ\[ƒXƒR[ƒh‚ğ¶¬B
+ * ã€Œãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å®šç¾©æ›¸ã€Excelæ§˜å¼ã‹ã‚‰ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡¦ç†ã™ã‚‹ã‚¯ãƒ©ã‚¹ãƒ»ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã‚’ç”Ÿæˆã€‚
  * 
- * ‚±‚ÌƒNƒ‰ƒX‚ÍA’†ŠÔXMLƒtƒ@ƒCƒ‹‚©‚çƒ\[ƒXƒR[ƒh‚ğ©“®¶¬‚·‚é‹@”\‚ğ’S‚¢‚Ü‚·B
+ * ã“ã®ã‚¯ãƒ©ã‚¹ã¯ã€ä¸­é–“XMLãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã‚’è‡ªå‹•ç”Ÿæˆã™ã‚‹æ©Ÿèƒ½ã‚’æ‹…ã„ã¾ã™ã€‚
  * 
  * @author IGA Tosiki
  */
 public class BlancoValueObjectPhpXml2SourceFile {
     /**
-     * ‚±‚Ìƒvƒƒ_ƒNƒg‚ÌƒŠƒ\[ƒXƒoƒ“ƒhƒ‹‚Ö‚ÌƒAƒNƒZƒXƒIƒuƒWƒFƒNƒgB
+     * ã“ã®ãƒ—ãƒ­ãƒ€ã‚¯ãƒˆã®ãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«ã¸ã®ã‚¢ã‚¯ã‚»ã‚¹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã€‚
      */
     private final BlancoValueObjectPhpResourceBundle fBundle = new BlancoValueObjectPhpResourceBundle();
 
     /**
-     * o—Í‘ÎÛ‚Æ‚È‚éƒvƒƒOƒ‰ƒ~ƒ“ƒOŒ¾ŒêB
+     * å‡ºåŠ›å¯¾è±¡ã¨ãªã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°è¨€èªã€‚
      */
     private int fTargetLang = BlancoCgSupportedLang.PHP;
 
     /**
-     * “à•”“I‚É—˜—p‚·‚éblancoCg—pƒtƒ@ƒNƒgƒŠB
+     * å†…éƒ¨çš„ã«åˆ©ç”¨ã™ã‚‹blancoCgç”¨ãƒ•ã‚¡ã‚¯ãƒˆãƒªã€‚
      */
     private BlancoCgObjectFactory fCgFactory = null;
 
     /**
-     * “à•”“I‚É—˜—p‚·‚éblancoCg—pƒ\[ƒXƒtƒ@ƒCƒ‹î•ñB
+     * å†…éƒ¨çš„ã«åˆ©ç”¨ã™ã‚‹blancoCgç”¨ã‚½ãƒ¼ã‚¹ãƒ•ã‚¡ã‚¤ãƒ«æƒ…å ±ã€‚
      */
     private BlancoCgSourceFile fCgSourceFile = null;
 
     /**
-     * “à•”“I‚É—˜—p‚·‚éblancoCg—pƒNƒ‰ƒXî•ñB
+     * å†…éƒ¨çš„ã«åˆ©ç”¨ã™ã‚‹blancoCgç”¨ã‚¯ãƒ©ã‚¹æƒ…å ±ã€‚
      */
     private BlancoCgClass fCgClass = null;
 
     /**
-     * ƒtƒB[ƒ‹ƒh–¼‚âƒƒ\ƒbƒh–¼‚Ì–¼‘O•ÏŒ`‚ğs‚¤‚©‚Ç‚¤‚©B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰åã‚„ãƒ¡ã‚½ãƒƒãƒ‰åã®åå‰å¤‰å½¢ã‚’è¡Œã†ã‹ã©ã†ã‹ã€‚
      */
     private boolean fNameAdjust = true;
 
     /**
-     * ©“®¶¬‚·‚éƒ\[ƒXƒtƒ@ƒCƒ‹‚Ì•¶šƒGƒ“ƒR[ƒfƒBƒ“ƒOB
+     * è‡ªå‹•ç”Ÿæˆã™ã‚‹ã‚½ãƒ¼ã‚¹ãƒ•ã‚¡ã‚¤ãƒ«ã®æ–‡å­—ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ã€‚
      */
     private String fEncoding = null;
 
@@ -80,86 +80,86 @@ public class BlancoValueObjectPhpXml2SourceFile {
     }
 
     /**
-     * ’†ŠÔXMLƒtƒ@ƒCƒ‹‚©‚çƒ\[ƒXƒR[ƒh‚ğ©“®¶¬‚µ‚Ü‚·B
+     * ä¸­é–“XMLãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã‚’è‡ªå‹•ç”Ÿæˆã—ã¾ã™ã€‚
      * 
      * @param argMetaXmlSourceFile
-     *            ƒƒ^î•ñ‚ªŠÜ‚Ü‚ê‚Ä‚¢‚éXMLƒtƒ@ƒCƒ‹B
+     *            ãƒ¡ã‚¿æƒ…å ±ãŒå«ã¾ã‚Œã¦ã„ã‚‹XMLãƒ•ã‚¡ã‚¤ãƒ«ã€‚
      * @param argTargetLang
-     *            o—Í‘ÎÛƒvƒƒOƒ‰ƒ~ƒ“ƒOŒ¾ŒêB
+     *            å‡ºåŠ›å¯¾è±¡ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°è¨€èªã€‚
      * @param argDirectoryTarget
-     *            ƒ\[ƒXƒR[ƒh¶¬æƒfƒBƒŒƒNƒgƒŠ (/main‚ğœ‚­•”•ª‚ğw’è‚µ‚Ü‚·)B
+     *            ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ç”Ÿæˆå…ˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª (/mainã‚’é™¤ãéƒ¨åˆ†ã‚’æŒ‡å®šã—ã¾ã™)ã€‚
      * @param argNameAdjust
-     *            –¼‘O•ÏŒ`‚ğs‚¤‚©‚Ç‚¤‚©B
+     *            åå‰å¤‰å½¢ã‚’è¡Œã†ã‹ã©ã†ã‹ã€‚
      * @throws IOException
-     *             “üo—Í—áŠO‚ª”­¶‚µ‚½ê‡B
+     *             å…¥å‡ºåŠ›ä¾‹å¤–ãŒç™ºç”Ÿã—ãŸå ´åˆã€‚
      */
     public void process(final File argMetaXmlSourceFile,
             final boolean argNameAdjust, final File argDirectoryTarget)
             throws IOException {
         fNameAdjust = argNameAdjust;
 
-        // ƒƒ^î•ñ‚ğ‰ğÍ‚µ‚ÄƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚ÌƒcƒŠ[‚ğæ“¾‚µ‚Ü‚·B
+        // ãƒ¡ã‚¿æƒ…å ±ã‚’è§£æã—ã¦ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ãƒ„ãƒªãƒ¼ã‚’å–å¾—ã—ã¾ã™ã€‚
         final BlancoXmlDocument documentMeta = new BlancoXmlUnmarshaller()
                 .unmarshal(argMetaXmlSourceFile);
 
-        // ƒ‹[ƒgƒGƒŒƒƒ“ƒg‚ğæ“¾‚µ‚Ü‚·B
+        // ãƒ«ãƒ¼ãƒˆã‚¨ãƒ¬ãƒ¡ãƒ³ãƒˆã‚’å–å¾—ã—ã¾ã™ã€‚
         final BlancoXmlElement elementRoot = BlancoXmlBindingUtil
                 .getDocumentElement(documentMeta);
         if (elementRoot == null) {
-            // ƒ‹[ƒgƒGƒŒƒƒ“ƒg‚ª–³‚¢ê‡‚É‚Íˆ—’†’f‚µ‚Ü‚·B
+            // ãƒ«ãƒ¼ãƒˆã‚¨ãƒ¬ãƒ¡ãƒ³ãƒˆãŒç„¡ã„å ´åˆã«ã¯å‡¦ç†ä¸­æ–­ã—ã¾ã™ã€‚
             return;
         }
 
-        // sheet(ExcelƒV[ƒg)‚ÌƒŠƒXƒg‚ğæ“¾‚µ‚Ü‚·B
+        // sheet(Excelã‚·ãƒ¼ãƒˆ)ã®ãƒªã‚¹ãƒˆã‚’å–å¾—ã—ã¾ã™ã€‚
         final List<BlancoXmlElement> listSheet = BlancoXmlBindingUtil
                 .getElementsByTagName(elementRoot, "sheet");
         final int sizeListSheet = listSheet.size();
         for (int index = 0; index < sizeListSheet; index++) {
-            // ‚¨‚Ì‚¨‚Ì‚ÌƒV[ƒg‚ğˆ—‚µ‚Ü‚·B
+            // ãŠã®ãŠã®ã®ã‚·ãƒ¼ãƒˆã‚’å‡¦ç†ã—ã¾ã™ã€‚
             final BlancoXmlElement elementSheet = (BlancoXmlElement) listSheet
                     .get(index);
 
-            // ‹¤’Êî•ñ‚ğæ“¾‚µ‚Ü‚·B
+            // å…±é€šæƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
             final BlancoXmlElement elementCommon = BlancoXmlBindingUtil
                     .getElement(elementSheet, fBundle
                             .getMeta2xmlElementCommon());
             if (elementCommon == null) {
-                // common‚ª–³‚¢ê‡‚É‚ÍA‚±‚ÌƒV[ƒg‚Ìˆ—‚ğƒXƒLƒbƒv‚µ‚Ü‚·B
+                // commonãŒç„¡ã„å ´åˆã«ã¯ã€ã“ã®ã‚·ãƒ¼ãƒˆã®å‡¦ç†ã‚’ã‚¹ã‚­ãƒƒãƒ—ã—ã¾ã™ã€‚
                 continue;
             }
 
             final String name = BlancoXmlBindingUtil.getTextContent(
                     elementCommon, "name");
             if (BlancoStringUtil.null2Blank(name).trim().length() == 0) {
-                // name‚ª‹ó‚Ìê‡‚É‚Íˆ—‚ğƒXƒLƒbƒv‚µ‚Ü‚·B
+                // nameãŒç©ºã®å ´åˆã«ã¯å‡¦ç†ã‚’ã‚¹ã‚­ãƒƒãƒ—ã—ã¾ã™ã€‚
                 continue;
             }
 
-            // ˆê——î•ñ‚ğæ“¾‚µ‚Ü‚·B
+            // ä¸€è¦§æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
             final BlancoXmlElement elementList = BlancoXmlBindingUtil
                     .getElement(elementSheet, fBundle.getMeta2xmlElementList());
 
-            // ƒV[ƒg‚©‚çÚ×‚Èî•ñ‚ğæ“¾‚µ‚Ü‚·B
+            // ã‚·ãƒ¼ãƒˆã‹ã‚‰è©³ç´°ãªæƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
             final BlancoValueObjectPhpStructure processStructure = parseSheet(
                     elementCommon, elementList, argDirectoryTarget);
 
             if (processStructure != null) {
-                // ƒƒ^î•ñ‚Ì‰ğÍŒ‹‰Ê‚ğ‚à‚Æ‚Éƒ\[ƒXƒR[ƒh©“®¶¬‚ğÀs‚µ‚Ü‚·B
+                // ãƒ¡ã‚¿æƒ…å ±ã®è§£æçµæœã‚’ã‚‚ã¨ã«ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰è‡ªå‹•ç”Ÿæˆã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
                 process(processStructure, argDirectoryTarget);
             }
         }
     }
 
     /**
-     * sheetƒGƒŒƒƒ“ƒg‚ğ“WŠJ‚µ‚Ü‚·B
+     * sheetã‚¨ãƒ¬ãƒ¡ãƒ³ãƒˆã‚’å±•é–‹ã—ã¾ã™ã€‚
      * 
      * @param argElementCommon
-     *            Œ»İˆ—‚µ‚Ä‚¢‚éCommonƒm[ƒhB
+     *            ç¾åœ¨å‡¦ç†ã—ã¦ã„ã‚‹Commonãƒãƒ¼ãƒ‰ã€‚
      * @param argElementList
-     *            Œ»İˆ—‚µ‚Ä‚¢‚éListƒm[ƒhB
+     *            ç¾åœ¨å‡¦ç†ã—ã¦ã„ã‚‹Listãƒãƒ¼ãƒ‰ã€‚
      * @param argDirectoryTarget
-     *            ƒ\[ƒXƒR[ƒh‚Ìo—ÍæƒtƒHƒ‹ƒ_B
-     * @return ûW‚³‚ê‚½ƒƒ^î•ñ\‘¢ƒf[ƒ^B
+     *            ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®å‡ºåŠ›å…ˆãƒ•ã‚©ãƒ«ãƒ€ã€‚
+     * @return åé›†ã•ã‚ŒãŸãƒ¡ã‚¿æƒ…å ±æ§‹é€ ãƒ‡ãƒ¼ã‚¿ã€‚
      */
     private BlancoValueObjectPhpStructure parseSheet(
             final BlancoXmlElement argElementCommon,
@@ -193,7 +193,7 @@ public class BlancoValueObjectPhpXml2SourceFile {
             return null;
         }
 
-        // ˆê——‚Ì“à—e‚ğæ“¾‚µ‚Ü‚·B
+        // ä¸€è¦§ã®å†…å®¹ã‚’å–å¾—ã—ã¾ã™ã€‚
         final List<BlancoXmlElement> listField = BlancoXmlBindingUtil
                 .getElementsByTagName(argElementList, "field");
         for (int indexField = 0; indexField < listField.size(); indexField++) {
@@ -215,7 +215,7 @@ public class BlancoValueObjectPhpXml2SourceFile {
                 continue;
             }
 
-            // Šù‚É“¯‚¶“à—e‚ª“o˜^‚³‚ê‚Ä‚¢‚È‚¢‚©‚Ç‚¤‚©‚Ìƒ`ƒFƒbƒNB
+            // æ—¢ã«åŒã˜å†…å®¹ãŒç™»éŒ²ã•ã‚Œã¦ã„ãªã„ã‹ã©ã†ã‹ã®ãƒã‚§ãƒƒã‚¯ã€‚
             for (int indexPast = 0; indexPast < processStructure.getListField()
                     .size(); indexPast++) {
                 final BlancoValueObjectPhpFieldStructure fieldPast = processStructure
@@ -230,7 +230,7 @@ public class BlancoValueObjectPhpXml2SourceFile {
             field.setType(BlancoXmlBindingUtil.getTextContent(elementField,
                     "type"));
             if (BlancoStringUtil.null2Blank(field.getType()).length() == 0) {
-                // ‚±‚±‚ÅˆÙíI—¹B
+                // ã“ã“ã§ç•°å¸¸çµ‚äº†ã€‚
                 continue;
             }
 
@@ -247,25 +247,25 @@ public class BlancoValueObjectPhpXml2SourceFile {
     }
 
     /**
-     * ûW‚³‚ê‚½î•ñ‚ğŒ³‚ÉAƒ\[ƒXƒR[ƒh‚ğ©“®¶¬‚µ‚Ü‚·B
+     * åé›†ã•ã‚ŒãŸæƒ…å ±ã‚’å…ƒã«ã€ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã‚’è‡ªå‹•ç”Ÿæˆã—ã¾ã™ã€‚
      * 
      * @param argProcessStructure
-     *            ƒƒ^ƒtƒ@ƒCƒ‹‚©‚çûW‚Å‚«‚½ˆ—\‘¢ƒf[ƒ^B
+     *            ãƒ¡ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰åé›†ã§ããŸå‡¦ç†æ§‹é€ ãƒ‡ãƒ¼ã‚¿ã€‚
      * @param argDirectoryTarget
-     *            ƒ\[ƒXƒR[ƒh‚Ìo—ÍæƒtƒHƒ‹ƒ_B
+     *            ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®å‡ºåŠ›å…ˆãƒ•ã‚©ãƒ«ãƒ€ã€‚
      */
     public void process(
             final BlancoValueObjectPhpStructure argProcessStructure,
             final File argDirectoryTarget) {
 
-        // ]—ˆ‚ÆŒİŠ·«‚ğ‚½‚¹‚é‚½‚ßA/mainƒTƒuƒtƒHƒ‹ƒ_‚Éo—Í‚µ‚Ü‚·B
+        // å¾“æ¥ã¨äº’æ›æ€§ã‚’æŒãŸã›ã‚‹ãŸã‚ã€/mainã‚µãƒ–ãƒ•ã‚©ãƒ«ãƒ€ã«å‡ºåŠ›ã—ã¾ã™ã€‚
         final File fileBlancoMain = new File(argDirectoryTarget
                 .getAbsolutePath()
                 + "/main");
 
         fCgFactory = BlancoCgObjectFactory.getInstance();
         fCgSourceFile = fCgFactory.createSourceFile(argProcessStructure
-                .getPackage(), "‚±‚Ìƒ\[ƒXƒR[ƒh‚Í blanco Framework‚É‚æ‚Á‚Ä©“®¶¬‚³‚ê‚Ä‚¢‚Ü‚·B");
+                .getPackage(), "ã“ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã¯ blanco Frameworkã«ã‚ˆã£ã¦è‡ªå‹•ç”Ÿæˆã•ã‚Œã¦ã„ã¾ã™ã€‚");
         fCgSourceFile.setEncoding(fEncoding);
         fCgClass = fCgFactory.createClass(argProcessStructure.getName(),
                 BlancoStringUtil.null2Blank(argProcessStructure
@@ -284,10 +284,10 @@ public class BlancoValueObjectPhpXml2SourceFile {
     }
 
     /**
-     * ƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚ğ“WŠJ‚µ‚Ü‚·B
+     * ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å±•é–‹ã—ã¾ã™ã€‚
      * 
      * @param argProcessStructure
-     *            ƒƒ^ƒtƒ@ƒCƒ‹‚©‚çûW‚Å‚«‚½ˆ—\‘¢ƒf[ƒ^B
+     *            ãƒ¡ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰åé›†ã§ããŸå‡¦ç†æ§‹é€ ãƒ‡ãƒ¼ã‚¿ã€‚
      */
     private void expandValueObject(
             final BlancoValueObjectPhpStructure argProcessStructure) {
@@ -308,7 +308,7 @@ public class BlancoValueObjectPhpXml2SourceFile {
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh‚ğ“WŠJ‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã‚’å±•é–‹ã—ã¾ã™ã€‚
      * 
      * @param argProcessStructure
      */
@@ -336,7 +336,7 @@ public class BlancoValueObjectPhpXml2SourceFile {
 
         if (fieldLook.getDefault() != null) {
             if (fieldLook.getType().equals("string")) {
-                // ƒNƒI[ƒg‚ğ•t—^‚µ‚Ü‚·B
+                // ã‚¯ã‚ªãƒ¼ãƒˆã‚’ä»˜ä¸ã—ã¾ã™ã€‚
                 cgField.setDefault(BlancoCgLineUtil
                         .getStringLiteralEnclosure(fTargetLang)
                         + BlancoJavaSourceUtil
@@ -359,7 +359,7 @@ public class BlancoValueObjectPhpXml2SourceFile {
     }
 
     /**
-     * setƒƒ\ƒbƒh‚ğ“WŠJ‚µ‚Ü‚·B
+     * setãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã—ã¾ã™ã€‚
      * 
      * @param argProcessStructure
      */
@@ -389,7 +389,7 @@ public class BlancoValueObjectPhpXml2SourceFile {
                         .getType(), fBundle
                         .getXml2sourceFileSetArgLangdoc(fieldLook.getName())));
 
-        // ƒƒ\ƒbƒh‚ÌÀ‘•
+        // ãƒ¡ã‚½ãƒƒãƒ‰ã®å®Ÿè£…
         final List<String> listLine = cgMethod.getLineList();
 
         listLine.add(BlancoCgLineUtil.getVariablePrefix(fTargetLang)
@@ -399,7 +399,7 @@ public class BlancoValueObjectPhpXml2SourceFile {
     }
 
     /**
-     * getƒƒ\ƒbƒh‚ğ“WŠJ‚µ‚Ü‚·B
+     * getãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã—ã¾ã™ã€‚
      * 
      * @param argProcessStructure
      */
@@ -434,7 +434,7 @@ public class BlancoValueObjectPhpXml2SourceFile {
                     fieldLook.getDescription());
         }
 
-        // ƒƒ\ƒbƒh‚ÌÀ‘•
+        // ãƒ¡ã‚½ãƒƒãƒ‰ã®å®Ÿè£…
         final List<String> listLine = cgMethod.getLineList();
 
         listLine
@@ -445,21 +445,21 @@ public class BlancoValueObjectPhpXml2SourceFile {
     }
 
     /**
-     * toStringƒƒ\ƒbƒh‚ğ“WŠJ‚µ‚Ü‚·B
+     * toStringãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã—ã¾ã™ã€‚
      * 
      * @param argProcessStructure
      */
     private void expandMethodToString(
             final BlancoValueObjectPhpStructure argProcessStructure) {
         final BlancoCgMethod method = fCgFactory.createMethod("__toString",
-                "‚±‚ÌƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚Ì•¶š—ñ•\Œ»‚ğæ“¾‚µ‚Ü‚·B");
+                "ã“ã®ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ–‡å­—åˆ—è¡¨ç¾ã‚’å–å¾—ã—ã¾ã™ã€‚");
         fCgClass.getMethodList().add(method);
 
         method.getLangDoc().getDescriptionList().add(
-                "ƒIƒuƒWƒFƒNƒg‚ÌƒVƒƒƒ[”ÍˆÍ‚Å‚µ‚©toString‚³‚ê‚È‚¢“_‚É’ˆÓ‚µ‚Ä—˜—p‚µ‚Ä‚­‚¾‚³‚¢B");
+                "ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ã‚·ãƒ£ãƒ­ãƒ¼ç¯„å›²ã§ã—ã‹toStringã•ã‚Œãªã„ç‚¹ã«æ³¨æ„ã—ã¦åˆ©ç”¨ã—ã¦ãã ã•ã„ã€‚");
         method
                 .setReturn(fCgFactory.createReturn("string",
-                        "ƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚Ì•¶š—ñ•\Œ»B"));
+                        "ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ–‡å­—åˆ—è¡¨ç¾ã€‚"));
 
         final List<String> listLine = method.getLineList();
 
@@ -523,7 +523,7 @@ public class BlancoValueObjectPhpXml2SourceFile {
                 strLine += BlancoCgLineUtil.getTerminator(fTargetLang);
                 listLine.add(strLine);
             } else {
-                listLine.add("// TODO ”z—ñ‚Í–¢‘Î‰‚Å‚·B");
+                listLine.add("// TODO é…åˆ—ã¯æœªå¯¾å¿œã§ã™ã€‚");
             }
         }
 

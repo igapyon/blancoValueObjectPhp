@@ -1,167 +1,167 @@
 /*
- * ���̃\�[�X�R�[�h�� blanco Framework�ɂ�莩����������܂����B
+ * このソースコードは blanco Frameworkにより自動生成されました。
  */
 package blanco.valueobjectphp.valueobject;
 
 /**
- * BlancoValueObjectPhp�̂Ȃ��ŗ��p�����ValueObject�ł��B
+ * BlancoValueObjectPhpのなかで利用されるValueObjectです。
  */
 public class BlancoValueObjectPhpFieldStructure {
     /**
-     * ���ڔԍ��B�ȗ��\�ł��B
+     * 項目番号。省略可能です。
      *
-     * �t�B�[���h: [no]�B
+     * フィールド: [no]。
      */
     private String fNo;
 
     /**
-     * �t�B�[���h�����w�肵�܂��B�K�{���ڂł��B
+     * フィールド名を指定します。必須項目です。
      *
-     * �t�B�[���h: [name]�B
+     * フィールド: [name]。
      */
     private String fName;
 
     /**
-     * �^�����p�b�P�[�W���̃t���C���t�Ŏw�肵�܂��B�K�{���ڂł��B
+     * 型名をパッケージ名のフル修飾付で指定します。必須項目です。
      *
-     * �t�B�[���h: [type]�B
+     * フィールド: [type]。
      */
     private String fType;
 
     /**
-     * �f�t�H���g�l���w�肵�܂��B
+     * デフォルト値を指定します。
      *
-     * �t�B�[���h: [default]�B
+     * フィールド: [default]。
      */
     private String fDefault;
 
     /**
-     * �t�B�[���h�ւ̐������w�肵�܂��B
+     * フィールドへの説明を指定します。
      *
-     * �t�B�[���h: [description]�B
+     * フィールド: [description]。
      */
     private String fDescription;
 
     /**
-     * �t�B�[���h [no] �̒l��ݒ肵�܂��B
+     * フィールド [no] の値を設定します。
      *
-     * �t�B�[���h�̐���: [���ڔԍ��B�ȗ��\�ł��B]�B
+     * フィールドの説明: [項目番号。省略可能です。]。
      *
-     * @param argNo �t�B�[���h[no]�ɐݒ肷��l�B
+     * @param argNo フィールド[no]に設定する値。
      */
     public void setNo(final String argNo) {
         fNo = argNo;
     }
 
     /**
-     * �t�B�[���h [no] �̒l���擾���܂��B
+     * フィールド [no] の値を取得します。
      *
-     * �t�B�[���h�̐���: [���ڔԍ��B�ȗ��\�ł��B]�B
+     * フィールドの説明: [項目番号。省略可能です。]。
      *
-     * @return �t�B�[���h[no]����擾�����l�B
+     * @return フィールド[no]から取得した値。
      */
     public String getNo() {
         return fNo;
     }
 
     /**
-     * �t�B�[���h [name] �̒l��ݒ肵�܂��B
+     * フィールド [name] の値を設定します。
      *
-     * �t�B�[���h�̐���: [�t�B�[���h�����w�肵�܂��B�K�{���ڂł��B]�B
+     * フィールドの説明: [フィールド名を指定します。必須項目です。]。
      *
-     * @param argName �t�B�[���h[name]�ɐݒ肷��l�B
+     * @param argName フィールド[name]に設定する値。
      */
     public void setName(final String argName) {
         fName = argName;
     }
 
     /**
-     * �t�B�[���h [name] �̒l���擾���܂��B
+     * フィールド [name] の値を取得します。
      *
-     * �t�B�[���h�̐���: [�t�B�[���h�����w�肵�܂��B�K�{���ڂł��B]�B
+     * フィールドの説明: [フィールド名を指定します。必須項目です。]。
      *
-     * @return �t�B�[���h[name]����擾�����l�B
+     * @return フィールド[name]から取得した値。
      */
     public String getName() {
         return fName;
     }
 
     /**
-     * �t�B�[���h [type] �̒l��ݒ肵�܂��B
+     * フィールド [type] の値を設定します。
      *
-     * �t�B�[���h�̐���: [�^�����p�b�P�[�W���̃t���C���t�Ŏw�肵�܂��B�K�{���ڂł��B]�B
+     * フィールドの説明: [型名をパッケージ名のフル修飾付で指定します。必須項目です。]。
      *
-     * @param argType �t�B�[���h[type]�ɐݒ肷��l�B
+     * @param argType フィールド[type]に設定する値。
      */
     public void setType(final String argType) {
         fType = argType;
     }
 
     /**
-     * �t�B�[���h [type] �̒l���擾���܂��B
+     * フィールド [type] の値を取得します。
      *
-     * �t�B�[���h�̐���: [�^�����p�b�P�[�W���̃t���C���t�Ŏw�肵�܂��B�K�{���ڂł��B]�B
+     * フィールドの説明: [型名をパッケージ名のフル修飾付で指定します。必須項目です。]。
      *
-     * @return �t�B�[���h[type]����擾�����l�B
+     * @return フィールド[type]から取得した値。
      */
     public String getType() {
         return fType;
     }
 
     /**
-     * �t�B�[���h [default] �̒l��ݒ肵�܂��B
+     * フィールド [default] の値を設定します。
      *
-     * �t�B�[���h�̐���: [�f�t�H���g�l���w�肵�܂��B]�B
+     * フィールドの説明: [デフォルト値を指定します。]。
      *
-     * @param argDefault �t�B�[���h[default]�ɐݒ肷��l�B
+     * @param argDefault フィールド[default]に設定する値。
      */
     public void setDefault(final String argDefault) {
         fDefault = argDefault;
     }
 
     /**
-     * �t�B�[���h [default] �̒l���擾���܂��B
+     * フィールド [default] の値を取得します。
      *
-     * �t�B�[���h�̐���: [�f�t�H���g�l���w�肵�܂��B]�B
+     * フィールドの説明: [デフォルト値を指定します。]。
      *
-     * @return �t�B�[���h[default]����擾�����l�B
+     * @return フィールド[default]から取得した値。
      */
     public String getDefault() {
         return fDefault;
     }
 
     /**
-     * �t�B�[���h [description] �̒l��ݒ肵�܂��B
+     * フィールド [description] の値を設定します。
      *
-     * �t�B�[���h�̐���: [�t�B�[���h�ւ̐������w�肵�܂��B]�B
+     * フィールドの説明: [フィールドへの説明を指定します。]。
      *
-     * @param argDescription �t�B�[���h[description]�ɐݒ肷��l�B
+     * @param argDescription フィールド[description]に設定する値。
      */
     public void setDescription(final String argDescription) {
         fDescription = argDescription;
     }
 
     /**
-     * �t�B�[���h [description] �̒l���擾���܂��B
+     * フィールド [description] の値を取得します。
      *
-     * �t�B�[���h�̐���: [�t�B�[���h�ւ̐������w�肵�܂��B]�B
+     * フィールドの説明: [フィールドへの説明を指定します。]。
      *
-     * @return �t�B�[���h[description]����擾�����l�B
+     * @return フィールド[description]から取得した値。
      */
     public String getDescription() {
         return fDescription;
     }
 
     /**
-     * ���̃o�����[�I�u�W�F�N�g�̕�����\�����擾���܂��B
+     * このバリューオブジェクトの文字列表現を取得します。
      *
-     * <P>�g�p��̒���</P>
+     * <P>使用上の注意</P>
      * <UL>
-     * <LI>�I�u�W�F�N�g�̃V�����[�͈͂̂ݕ����񉻂̏����ΏۂƂȂ�܂��B
-     * <LI>�I�u�W�F�N�g���z�Q�Ƃ��Ă���ꍇ�ɂ́A���̃��\�b�h�͎g��Ȃ��ł��������B
+     * <LI>オブジェクトのシャロー範囲のみ文字列化の処理対象となります。
+     * <LI>オブジェクトが循環参照している場合には、このメソッドは使わないでください。
      * </UL>
      *
-     * @return �o�����[�I�u�W�F�N�g�̕�����\���B
+     * @return バリューオブジェクトの文字列表現。
      */
     @Override
     public String toString() {
