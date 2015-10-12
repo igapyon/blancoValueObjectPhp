@@ -247,6 +247,14 @@ public class BlancoValueObjectPhpXml2SourceFile {
                 continue;
             }
 
+            field.setGeneric(BlancoXmlBindingUtil.getTextContent(elementField,
+                    "generic"));
+
+            /* debug */
+            if (BlancoStringUtil.null2Blank(field.getGeneric()).length() != 0) {
+                System.out.println("/* tueda */ generic = " + field.getGeneric());
+            }
+
             field.setDefault(BlancoXmlBindingUtil.getTextContent(elementField,
                     "default"));
 
@@ -333,6 +341,8 @@ public class BlancoValueObjectPhpXml2SourceFile {
             expandMethodGet(argProcessStructure, fieldLook);
 
             expandMethodType(argProcessStructure, fieldLook);
+
+            expandMethodGeneric(argProcessStructure, fieldLook);
         }
 
         expandMethodToString(argProcessStructure);
@@ -350,6 +360,9 @@ public class BlancoValueObjectPhpXml2SourceFile {
         if (fNameAdjust) {
             fieldName = BlancoNameAdjuster.toClassName(fieldName);
         }
+
+//        /* tueda */
+//        System.out.println("/* tueda */ field : " + fieldName + ", type : " + fieldLook.getType());
 
         final BlancoCgField cgField = fCgFactory.createField("f" + fieldName,
                 fieldLook.getType(), "");
@@ -518,6 +531,57 @@ public class BlancoValueObjectPhpXml2SourceFile {
         listLine
                 .add("return "
                         + "\"" + fieldLook.getType() + "\""
+                        + BlancoCgLineUtil.getTerminator(fTargetLang));
+    }
+
+    /**
+     * Genericメソッドを展開します
+     * @param argProcessStructure
+     * @param fieldLook
+     */
+    private void expandMethodGeneric(
+            final BlancoValueObjectPhpStructure argProcessStructure,
+            final BlancoValueObjectPhpFieldStructure fieldLook) {
+        String fieldName = fieldLook.getName();
+        String fieldGeneric = fieldLook.getGeneric();
+        if (BlancoStringUtil.null2Blank(fieldGeneric).length() == 0) {
+            return;
+        }
+
+        if (fNameAdjust) {
+            fieldName = BlancoNameAdjuster.toClassName(fieldName);
+        }
+
+        final BlancoCgMethod cgMethod = fCgFactory.createMethod("generic"
+                + fieldName, fBundle.getXml2sourceFileTypeLangdoc01(fieldLook
+                .getName()));
+        fCgClass.getMethodList().add(cgMethod);
+        cgMethod.setAccess("public");
+        cgMethod.setStatic(true);
+
+        cgMethod.getLangDoc().getDescriptionList().add(
+                fBundle.getXml2sourceFileTypeLangdoc02(fieldGeneric));
+
+        cgMethod.setReturn(fCgFactory.createReturn(fieldGeneric, fBundle
+                .getXml2sourceFileTypeReturnLangdoc(fieldLook.getName())));
+
+        if (fieldLook.getDefault() != null) {
+            cgMethod.getLangDoc().getDescriptionList().add(
+                    fBundle.getXml2sourceFileTypeArgLangdoc(fieldLook
+                            .getDefault()));
+        }
+
+        if (BlancoStringUtil.null2Blank(fieldLook.getDescription()).length() > 0) {
+            cgMethod.getLangDoc().getDescriptionList().add(
+                    fieldLook.getDescription());
+        }
+
+        // メソッドの実装
+        final List<String> listLine = cgMethod.getLineList();
+
+        listLine
+                .add("return "
+                        + "\"" + fieldGeneric + "\""
                         + BlancoCgLineUtil.getTerminator(fTargetLang));
     }
 
