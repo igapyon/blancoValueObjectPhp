@@ -44,8 +44,26 @@
         <tablecolumn name="generic">
           <value>総称型</value>
         </tablecolumn>
+        <tablecolumn name="fieldRequired">
+          <value>必須</value>
+        </tablecolumn>
         <tablecolumn name="default">
           <value>デフォルト</value>
+        </tablecolumn>
+        <tablecolumn name="minLength">
+          <value>Min長</value>
+        </tablecolumn>
+        <tablecolumn name="maxLength">
+          <value>Max長</value>
+        </tablecolumn>
+        <tablecolumn name="minInclusive">
+          <value>Min値</value>
+        </tablecolumn>
+        <tablecolumn name="maxInclusive">
+          <value>Max値</value>
+        </tablecolumn>
+        <tablecolumn name="pattern">
+          <value>正規表現</value>
         </tablecolumn>
         <tablecolumn name="description">
           <value>説明</value>
