@@ -469,8 +469,8 @@ public class BlancoValueObjectPhpXml2SourceFile {
                         strFieldRequired += ",\n" + strIndentBlank;
                     }
                     strFieldRequired += "'" + fieldName + "' => 'YES'";
+                    isFieldRequiredLoop = true;
                 }
-                isFieldRequiredLoop = true;
             }
 
         }
