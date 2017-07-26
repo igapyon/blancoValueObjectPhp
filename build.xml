@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="blancoValueObjectPhp" default="build" basedir=".">
 	<!-- blancoAnt(0.1.7)により自動生成されました。 (2009/11/06) -->
-	<property name="version" value="2.0.0" />
+	<property name="version" value="0.0.9" />
 
 	<property name="project" value="blancoValueObjectPhp" />
 	<property name="project.lower" value="blancovalueobjectphp" />
@@ -52,6 +52,8 @@
 	<!-- 自分自身のAntタスク。 -->
 	<taskdef name="blancovalueobjectphp" classname="blanco.valueobjectphp.task.BlancoValueObjectPhpTask">
 		<classpath>
+			<dirset dir="bin" />
+			<dirset dir="src" />
 			<fileset dir="lib" includes="*.jar" />
 			<fileset dir="lib.ant" includes="*.jar" />
 		</classpath>
@@ -106,13 +108,13 @@
 	<target name="compile">
 		<delete dir="bin" />
 		<mkdir dir="bin" />
-		<javac destdir="bin" debug="true" source="1.6" target="1.6" fork="true" encoding="${encoding}">
+		<javac destdir="bin" debug="true" source="1.7" target="1.7" fork="false" encoding="${encoding}">
 			<src path="blanco/main/" />
 			<src path="src/" />
 			<classpath>
 				<!-- ワイルドカードで一括取り込み -->
 				<fileset dir="lib" includes="*.jar" />
-				<pathelement path="${eclipse.dir}/plugins/org.junit_3.8.2.v20080602-1318/junit.jar" />
+				<!-- pathelement path="${eclipse.dir}/plugins/org.junit_3.8.2.v20080602-1318/junit.jar" / -->
 			</classpath>
 			<include name="**/*.java" />
 		</javac>
@@ -144,5 +146,19 @@
 
 	<target name="build" depends="meta,compile,jar,pack">
 	</target>
+
+	<target name="cleanblanco">
+		<delete dir="blanco" />
+		<delete dir="blanco.php" />
+		<delete dir="tmp" />
+	</target>
+
+	<target name="cleanjava">
+		<delete dir="bin" />
+		<delete dir="classes" />
+		<mkdir dir="bin" />
+	</target>
+
+	<target name="clean" depends="cleanjava, cleanblanco" />
 
 </project>

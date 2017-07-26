@@ -9,13 +9,25 @@
           <value>クラス名</value>
         </propertykey>
         <propertykey name="package" waitX="2">
+          <value>名前空間</value>
+        </propertykey>
+        <!--
+        <propertykey name="package" waitX="2">
           <value>パッケージ</value>
         </propertykey>
+        -->
         <propertykey name="description" waitX="2">
           <value>説明</value>
         </propertykey>
         <propertykey name="fileDescription" waitX="2">
           <value>ファイル説明</value>
+        </propertykey>
+      </propertyblock>
+
+      <propertyblock name="blancovalueobjectphp-extends" waitY="1">
+        <startstring>バリューオブジェクト定義(php)・継承</startstring>
+        <propertykey name="name" waitX="2">
+          <value>クラス名</value>
         </propertykey>
       </propertyblock>
 
@@ -31,8 +43,29 @@
         <tablecolumn name="type">
           <value>型</value>
         </tablecolumn>
+        <tablecolumn name="generic">
+          <value>総称型</value>
+        </tablecolumn>
+        <tablecolumn name="fieldRequired">
+          <value>必須</value>
+        </tablecolumn>
         <tablecolumn name="default">
           <value>デフォルト</value>
+        </tablecolumn>
+        <tablecolumn name="minLength">
+          <value>Min長</value>
+        </tablecolumn>
+        <tablecolumn name="maxLength">
+          <value>Max長</value>
+        </tablecolumn>
+        <tablecolumn name="minInclusive">
+          <value>Min値</value>
+        </tablecolumn>
+        <tablecolumn name="maxInclusive">
+          <value>Max値</value>
+        </tablecolumn>
+        <tablecolumn name="pattern">
+          <value>正規表現</value>
         </tablecolumn>
         <tablecolumn name="description">
           <value>説明</value>
