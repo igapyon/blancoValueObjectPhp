@@ -179,11 +179,11 @@ public class BlancoValueObjectPhpXml2SourceFile {
         processStructure.setPackage(BlancoXmlBindingUtil.getTextContent(
                 argElementCommon, "package"));
 
-        if (BlancoStringUtil.null2Blank(processStructure.getPackage()).trim()
-                .length() == 0) {
-            throw new IllegalArgumentException(fBundle
-                    .getXml2sourceFileErr001(processStructure.getName()));
-        }
+//        if (BlancoStringUtil.null2Blank(processStructure.getPackage()).trim()
+//                .length() == 0) {
+//            throw new IllegalArgumentException(fBundle
+//                    .getXml2sourceFileErr001(processStructure.getName()));
+//        }
 
         if (BlancoXmlBindingUtil
                 .getTextContent(argElementCommon, "description") != null) {
