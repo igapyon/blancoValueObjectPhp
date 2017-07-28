@@ -29,6 +29,9 @@
         <propertykey name="name" waitX="2">
           <value>クラス名</value>
         </propertykey>
+        <propertykey name="package" waitX="2">
+          <value>名前空間</value>
+        </propertykey>
       </propertyblock>
 
       <tableblock name="blancovalueobjectphp-list" waitY="2" titleheight="3" rowname="field">

@@ -198,8 +198,17 @@ public class BlancoValueObjectPhpXml2SourceFile {
         }
 
         if (argElementExtends != null) {
-            processStructure.setExtends(BlancoXmlBindingUtil.getTextContent(
-                    argElementExtends, "name"));
+            String name = BlancoXmlBindingUtil
+                    .getTextContent(argElementExtends, "name");
+            String mypackage = BlancoXmlBindingUtil
+                    .getTextContent(argElementExtends, "package");
+            if (name != null) {
+                String namespace = name;
+                if (mypackage != null) {
+                    namespace = mypackage + "\\" + namespace;
+                }
+                processStructure.setExtends(namespace);
+            }
         }
 
         if (argElementList == null) {
