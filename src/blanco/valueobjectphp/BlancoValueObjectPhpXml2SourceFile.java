@@ -176,8 +176,11 @@ public class BlancoValueObjectPhpXml2SourceFile {
                 argElementCommon, "name"));
         processStructure.setNamespace(BlancoXmlBindingUtil.getTextContent(
                 argElementCommon, "namespace"));
-        processStructure.setPackage(BlancoXmlBindingUtil.getTextContent(
-                argElementCommon, "package"));
+        String myNamespace = BlancoXmlBindingUtil.getTextContent(argElementCommon,"package");
+        if (myNamespace == null) {
+            myNamespace = "";
+        }
+        processStructure.setPackage(myNamespace);
 
 //        if (BlancoStringUtil.null2Blank(processStructure.getPackage()).trim()
 //                .length() == 0) {
