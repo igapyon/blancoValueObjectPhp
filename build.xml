@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="blancoValueObjectPhp" default="build" basedir=".">
 	<!-- blancoAnt(0.1.7)により自動生成されました。 (2009/11/06) -->
-	<property name="version" value="0.0.9" />
+	<property name="version" value="2.0.1" />
 
 	<property name="project" value="blancoValueObjectPhp" />
 	<property name="project.lower" value="blancovalueobjectphp" />
