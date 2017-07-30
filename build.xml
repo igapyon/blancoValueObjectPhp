@@ -141,7 +141,7 @@
 		<blancovalueobject metadir="meta/program" encoding="${encoding}" />
 
 		<!-- TODO: ここに自身のantタスクを追加してください。 -->
-		<blancovalueobjectphp metadir="meta/program" targetdir="blanco.php" encoding="${encoding}" verbose="true" />
+		<blancovalueobjectphp metadir="meta/objects" targetdir="blanco.php" encoding="${encoding}" verbose="true" />
 	</target>
 
 	<target name="build" depends="meta,compile,jar,pack">
